@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+        html,body {
+            margin: 0 auto;
+            height: 100%;
+            width:100%
+        }
+
+
+    </style>
+</head>
+<body>
+<div style="background: yellow; height:100%; width: 100%;">
+    <div >
+        <img src="../img/logo＋说明-07.png" style="margin-top: -200px">
+    </div>
+    <div>
+        <img src="../img/段落3-07.png" style="margin-top: -140px;  margin-left: 150px;">
+    </div>
+</div>
+</body>
+<script type="application/javascript" src="../js/jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        str=window.location.search.substring(14);
+        setTimeout(function () {
+            location.href="index4.html?randomNumber="+str;
+        }, 500);
+    })
+</script>
+</html>

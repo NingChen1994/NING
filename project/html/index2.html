@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+
+        html,body {
+            margin: 0 auto;
+            height: 100%;
+            width:100%
+        }
+        img{ }
+
+    </style>
+</head>
+<body>
+<div style="background: yellow; height:100%; width: 100%;">
+    <div >
+        <img src="../img/logo＋说明-07.png" style="margin-top: -200px">
+    </div>
+    <div>
+        <img src="../img/段落2-07.png" style="margin-top: -280px;  margin-left: 150px;">
+    </div>
+
+    <!--煎饼-->
+    <div class="chinese" id="1">
+        <img src="../img/oldjb.png" style="position: fixed;top: 370px;left: 550px;">
+        <img src="../img/newjb.png" style="position: fixed;top: 370px;left: 550px;display: none">
+    </div>
+    <!--汉堡-->
+    <div class="chinese"  id="2">
+        <img src="../img/oldhb.png" style="position: fixed;top: 500px;left: 510px;">
+        <img src="../img/newhb.png" style="position: fixed;top: 500px;left: 510px;display: none">
+    </div>
+
+    <!--三明治-->
+    <div class="chinese"  id="3">
+        <img src="../img/oldsmz.png" style="position: fixed;top: 630px;left: 510px;">
+        <img src="../img/newsmz.png" style="position: fixed;top: 630px;left: 510px;display: none">
+    </div>
+
+</div>
+</body>
+<script type="application/javascript" src="../js/jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        randomNumber=window.location.search.substring(14);
+        var num;
+        $(".chinese").click(function () {
+            var two=$(this).attr("id");
+            location.href="index3.html?randomNumber="+randomNumber+"&num="+two;
+        })
+        // 鼠标移入移出事件
+        $(".chinese").hover(function() {
+            // 鼠标移入时添加hover类
+            $(this).find("img").eq(0).hide();
+            $(this).find("img").eq(1).show();
+        }, function() {
+            // 鼠标移出时移出hover类
+            $(this).find("img").eq(1).hide();
+            $(this).find("img").eq(0).show();
+
+        });
+    })
+</script>
+</html>
+
+
+
